@@ -82,3 +82,18 @@ apt update && apt install -y python3 pip sqlite nodejs lua golang && \
 pip install --upgrade pip && pip install sqlite3 && \
 npm install -g chalk sqlite3 && \
 mkdir -p ~/.anomaly_detector && chmod 700 ~/.anomaly_detector
+# Clone the repository
+git clone https://github.com/yourusername/login-anomaly-detector.git
+cd login-anomaly-detector
+
+# Install dependencies
+bash install.sh
+
+# Test installation
+bash test_suite.sh
+
+# Initialize database
+python3 login_anomaly_detector.py --baseline
+
+#Interactive mode easiest way
+python3 login_anomaly_detector.py
